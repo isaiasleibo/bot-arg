@@ -2,6 +2,17 @@
   margin: 0;
   padding: 0;
   font-family: "Barlow", sans-serif;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent; /* Safari/iOS */
+  -webkit-tap-highlight-color: rgba(0,0,0,0); /* Alternativa */
+  user-select: none;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  overflow: hidden;
 }
 
 body {
@@ -13,100 +24,106 @@ body {
   flex-direction: column;
 }
 
-header {
+#header {
   background-color: #372fc2;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 10px 15px;
+  height: 55px;
+  padding: 0 20px;
+  position: sticky;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
 
-  #hamburger-logo {
+  img {
     height: 20px;
+    padding-right: 30px;
+    cursor: pointer;
   }
-
-  #miargentina-logo {
-    height: 30px;
-  }
-
-  #usuario-verificado {
-    height: 35px;
-  }
-}
-
-#second-header {
-  background-color: #372fc2;
-  height: 45px;
-  padding-bottom: 20px;
-  display: flex;
-  justify-content: center;
-  border-bottom-left-radius: 12px;
-  border-bottom-right-radius: 12px;
 
   p {
     color: white;
-    text-align: center;
     font-weight: 600;
-    margin-top: 5px;
+    font-size: 18px;
   }
 }
 
-#turnos-programados {
-  width: calc(100% - 70px);
+footer {
   background-color: white;
-  margin: 0 auto;
+  box-shadow: rgba(33, 35, 38, 0.1) 0px -10px 10px -10px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
-  position: relative;
-  top: -20px;
+  justify-content: space-around;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
 
+  .footer-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-  img {
-    height: 65px;
-    padding-right: 30px;
-  }
-
-  p {
-    font-weight: 500;
-    color: #333333;
-  }
-
-  button {
-    all: unset;
-    background-color: #372fc2;
-    border-radius: 20px;
-    margin-top: 10px;
+    img {
+      height: 20px;
+    }
 
     p {
-      color: white;
       font-size: 12px;
-      font-weight: 600;
-      padding: 8px 30px;
+      color: #858585;
+      margin-top: 3px;
+    }
+  }
+
+  .footer-button.active {
+    p {
+      font-weight: 700;
+      color: #3730b8;
     }
   }
 }
 
-#crendeciales-al-dia {
-  background-color: #cbecdb;
-  width: calc(100% - 80px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 25px;
-  margin: 0 auto;
-  border-radius: 10px;
+/* --- New Animation Styles --- */
 
-  p {
-    font-size: 18px;
-    font-weight: 700;
-    color: #323232;
+.app-wrapper {
+  position: relative;
+  width: 100%;
+  flex-grow: 1;
+  /* Make it fill the available space */
+}
+
+.home-page,
+.detail-page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.4s ease-in-out;
+  background-color: #f0f0f0;
+  overflow-y: auto;
+  padding-bottom: calc(30px + 57px);
+}
+
+.home-page {
+  transform: translateX(0);
+  z-index: 1;
+}
+
+.detail-page {
+  transform: translateX(100%);
+  z-index: 2;
+}
+
+.app-wrapper.show-detail {
+  .home-page {
+    transform: translateX(-100%);
   }
 
-  img {
-    height: 50px;
-    padding-left: 20px;
+  .detail-page {
+    transform: translateX(0);
   }
 }

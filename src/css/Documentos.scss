@@ -1,0 +1,146 @@
+.documentos {
+    #dni-container {
+        background-color: white;
+        box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+        width: calc(100% - 30px);
+        margin: 0 auto;
+        margin-top: 20px;
+        border-radius: 8px;
+
+        #always-shown-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px;
+            cursor: pointer; // Para que el cursor cambie a una mano
+            user-select: none; // Para evitar que el texto se seleccione al hacer clic
+
+            #main-objects {
+                display: flex;
+                align-items: center;
+
+                #dni-img {
+                    height: 30px;
+                }
+
+                #divider {
+                    width: 1px;
+                    height: 40px;
+                    background-color: #d1d1d1;
+                    margin: 0 15px;
+                }
+
+                p {
+                    font-weight: 700;
+                    color: #333333;
+                }
+            }
+
+            #arrow {
+                width: 15px;
+                object-fit: contain;
+                margin-left: 10px;
+
+                &.rotated {
+                    transform: rotate(180deg); // Clase para rotar la flecha
+                }
+            }
+        }
+
+        #hidden-section {
+            max-height: 0; // Oculto por defecto
+            overflow: hidden;
+
+            &.visible {
+                max-height: 500px; // Una altura suficiente para mostrar todo el contenido
+            }
+
+            #divider-horizontal {
+                background-color: #d1d1d1;
+                width: 100%;
+                height: 1px;
+                margin: 20px 0;
+            }
+
+            #divider-horizontal:first-child {
+                margin-top: 0;
+            }
+
+            #show-dni {
+                all: unset;
+                width: calc(100% - 30px);
+                margin: 0 auto;
+                background-color: #372fc2;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 50px;
+                border-radius: 50px;
+                cursor: pointer;
+
+                p {
+                    color: white;
+                    font-size: 18px;
+                    font-weight: 700;
+                }
+            }
+
+            #suministrado-por {
+                font-size: 13px;
+                margin-left: 15px;
+
+                span {
+                    color: #72a8db;
+                    font-weight: 700;
+                }
+            }
+
+            #solicitar-dni {
+                p {
+                    font-size: 13px;
+                    margin: 0 15px;
+                }
+
+                button {
+                    all: unset;
+                    width: calc(100% - 30px);
+                    margin: 0 auto;
+                    margin-top: 20px;
+                    background-color: white;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 50px;
+                    border-radius: 50px;
+                    border: 1px solid #372fc2;
+                    cursor: pointer;
+
+                    p {
+                        color: #372fc2;
+                        font-size: 18px;
+                        font-weight: 700;
+                    }
+                }
+            }
+
+            #documentos-info {
+                display: flex;
+                align-items: center;
+                width: calc(100% - 30px);
+                margin: 0 auto;
+                padding-bottom: 20px;
+
+                img {
+                    height: 35px;
+                    margin-right: 15px;
+                }
+
+                p {
+                    font-size: 11px;
+                    color: #372fc2;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}

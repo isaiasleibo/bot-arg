@@ -1,0 +1,191 @@
+.home {
+    header {
+        background-color: #372fc2;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
+        position: sticky;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        box-shadow: rgba(33, 35, 38, 1) 0px -10px 10px -10px;
+
+        #hamburger-logo {
+            height: 20px;
+        }
+
+        #miargentina-logo {
+            height: 30px;
+        }
+
+        #usuario-verificado {
+            height: 35px;
+        }
+    }
+
+    #second-header {
+        background-color: #372fc2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px 0 35px;
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+
+        p {
+            color: white;
+            text-align: center;
+            font-weight: 600;
+        }
+    }
+
+    #turnos-programados {
+        box-sizing: content-box;
+        width: calc(100% - 70px);
+        background-color: white;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+        position: relative;
+        top: -20px;
+
+
+        img {
+            height: 65px;
+            padding-right: 30px;
+        }
+
+        p {
+            font-weight: 500;
+            color: #333333;
+        }
+
+        button {
+            all: unset;
+            background-color: #372fc2;
+            border-radius: 20px;
+            margin-top: 10px;
+            cursor: pointer;
+
+            p {
+                color: white;
+                font-size: 12px;
+                font-weight: 600;
+                padding: 8px 30px;
+            }
+        }
+    }
+
+    #crendeciales-al-dia {
+        box-sizing: content-box;
+        width: calc(100% - 80px);
+        background-color: #cbecdb;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 25px;
+        margin: 0 auto;
+        border-radius: 12px;
+
+        p {
+            font-size: 18px;
+            font-weight: 700;
+            color: #323232;
+        }
+
+        img {
+            height: 50px;
+            padding-left: 20px;
+        }
+    }
+
+    #pages {
+        box-sizing: content-box;
+        width: calc(100% - 20px);
+        margin: 0 auto;
+        margin-top: 20px;
+
+        #title {
+            color: #323232;
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        #cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            margin-top: 10px;
+
+            .card {
+                background-color: white;
+                margin: 5px;
+                padding: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                border-radius: 8px;
+                height: 80px;
+                box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+                cursor: pointer;
+                text-align: center;
+
+                img {
+                    width: 35px;
+                    height: 35px;
+                    object-fit: contain;
+                }
+
+                p {
+                    font-size: 11px;
+                    font-weight: 700;
+                    color: #333333;
+                    margin-top: 8px;
+                }
+            }
+        }
+    }
+
+    #suscribir-servicios {
+        box-sizing: content-box;
+        width: calc(100% - 80px);
+        background-color: #d1d1d1;
+        display: flex;
+        padding: 20px 15px;
+        margin: 0 auto;
+        margin-top: 30px;
+        border-radius: 10px;
+
+        img {
+            width: 100px;
+            padding-right: 25px;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            #title {
+                width: 100%;
+                font-weight: 700;
+                font-size: 16px;
+                color: #333333;
+                margin-bottom: 5px;
+            }
+
+            #description {
+                width: 100%;
+                font-size: 14px;
+                color: #333333;
+            }
+        }
+    }
+}
