@@ -1,0 +1,50 @@
+.telefonos {
+    #numeros-de-telefono {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 20px;
+        
+        .telefono {
+            background-color: white;
+            width: calc(100% - 30px);
+            margin: 0 auto;
+            border-radius: 8px;
+            box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .data {
+                display: flex;
+                align-items: center;
+
+                .numero {
+                    color: #372fc2;
+                    font-weight: 700;
+                    font-size: 32px;
+                    width: 50px;
+                    text-align: center;
+                }
+
+                #divider {
+                    width: 1px;
+                    height: 40px;
+                    background-color: #d1d1d1;
+                    margin: 0 15px;
+                }
+
+                .nombre {
+                    font-size: 13px;
+                    font-weight: 600;
+                    color: #333333;
+                }
+            }
+
+            img {
+                height: 16px;
+            }
+        }
+    }
+}

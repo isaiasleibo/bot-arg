@@ -1,0 +1,138 @@
+.register {
+    background-color: white;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    /* Ancho máximo para el formulario */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Sombra sutil */
+
+    #header-register {
+        height: 55px;
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+        border-bottom: 1px solid #e0e0e0;
+        /* Línea divisoria */
+        margin-bottom: 20px;
+
+        #atras {
+            height: 20px;
+            padding-right: 30px;
+            cursor: pointer;
+            /* Cursor de mano para indicar que es clickeable */
+        }
+
+        p {
+            color: #333333;
+            font-weight: 600;
+            font-size: 18px;
+        }
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        /* Espacio entre elementos del formulario */
+        width: 100%;
+        padding: 20px;
+        padding-top: 0;
+    }
+
+    .form-section {
+        h3 {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #f0f0f0;
+            padding-bottom: 10px;
+        }
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="date"],
+    input[type="number"],
+    select {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        /* Asegura que el padding no afecte el ancho total */
+        margin-bottom: 10px;
+        /* Espacio debajo de cada input */
+        font-size: 14px;
+    }
+
+    /* Estilos para el foco en los inputs */
+    input:focus,
+    select:focus {
+        outline: none;
+        border-color: #372fc2;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: 500;
+        font-size: 14px;
+        color: #555;
+    }
+
+    .error-message {
+        color: #dc3545;
+        /* Rojo para errores */
+        font-size: 12px;
+        margin-top: -5px;
+        /* Ajuste para que esté más cerca del input */
+        margin-bottom: 10px;
+    }
+
+    .optional-section {
+        h3 {
+            cursor: pointer;
+            user-select: none;
+            /* Evita que el texto se seleccione al hacer clic */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .optional-fields {
+            margin-top: 10px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+        }
+    }
+
+    input[readOnly] {
+        background-color: #e9ecef;
+        /* Fondo gris para campos de solo lectura */
+        cursor: not-allowed;
+    }
+
+    button[type="submit"] {
+        all: unset;
+        width: 100%;
+        margin: 0 auto;
+        background-color: #372fc2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        border-radius: 50px;
+        cursor: pointer;
+        color: white;
+        font-weight: 700;
+        font-size: 18px;
+
+        &:hover {
+            background-color: #4b44d3;
+        }
+    }
+}

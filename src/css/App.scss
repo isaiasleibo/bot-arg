@@ -3,8 +3,10 @@
   padding: 0;
   font-family: "Barlow", sans-serif;
   box-sizing: border-box;
-  -webkit-tap-highlight-color: transparent; /* Safari/iOS */
-  -webkit-tap-highlight-color: rgba(0,0,0,0); /* Alternativa */
+  -webkit-tap-highlight-color: transparent;
+  /* Safari/iOS */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  /* Alternativa */
   user-select: none;
 }
 
@@ -22,6 +24,35 @@ body {
 #root {
   display: flex;
   flex-direction: column;
+  position: relative; 
+}
+
+/* Se movieron los estilos de #header a Header.scss para que sea un componente autocontenido */
+
+header {
+  background-color: #372fc2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  position: sticky;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  box-shadow: rgba(33, 35, 38, 1) 0px -10px 10px -10px;
+
+  #hamburger-logo {
+    height: 20px;
+  }
+
+  #miargentina-logo {
+    height: 30px;
+  }
+
+  #usuario-verificado {
+    height: 35px;
+  }
 }
 
 #header {
@@ -52,29 +83,50 @@ body {
 footer {
   background-color: white;
   box-shadow: rgba(33, 35, 38, 0.1) 0px -10px 10px -10px;
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   padding: 10px 0;
   position: fixed;
   width: 100%;
   bottom: 0;
   left: 0;
-  z-index: 10;
+  z-index: 20;
 
   .footer-button {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    img {
-      height: 20px;
-    }
+    cursor: pointer;
 
     p {
       font-size: 12px;
       color: #858585;
       margin-top: 3px;
+      transition: color 0.4s ease, font-weight 0.4s ease;
+    }
+    
+    .image-container {
+      position: relative;
+      height: 20px;
+      width: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        height: 20px;
+        position: absolute;
+        transition: opacity 0.4s ease-in-out;
+      }
+      
+      .active-icon {
+        opacity: 0;
+      }
+
+      .inactive-icon {
+        opacity: 1;
+      }
     }
   }
 
@@ -83,20 +135,30 @@ footer {
       font-weight: 700;
       color: #3730b8;
     }
+
+    .image-container {
+      .active-icon {
+        opacity: 1;
+      }
+      .inactive-icon {
+        opacity: 0;
+      }
+    }
   }
 }
 
-/* --- New Animation Styles --- */
+/* --- Estilos de Página y Animación --- */
 
 .app-wrapper {
   position: relative;
   width: 100%;
-  flex-grow: 1;
-  /* Make it fill the available space */
+  height: 100%;
+  overflow: hidden;
 }
 
 .home-page,
-.detail-page {
+.detail-page,
+.sub-detail-page {
   position: absolute;
   top: 0;
   left: 0;
@@ -105,17 +167,24 @@ footer {
   transition: transform 0.4s ease-in-out;
   background-color: #f0f0f0;
   overflow-y: auto;
-  padding-bottom: calc(30px + 57px);
 }
 
 .home-page {
   transform: translateX(0);
   z-index: 1;
+  padding-bottom: calc(30px + 57px);
 }
 
 .detail-page {
   transform: translateX(100%);
   z-index: 2;
+  padding-bottom: calc(50px + 57px);
+}
+
+.sub-detail-page {
+  transform: translateX(100%);
+  z-index: 3;
+  padding-bottom: calc(50px + 57px);
 }
 
 .app-wrapper.show-detail {
@@ -126,4 +195,29 @@ footer {
   .detail-page {
     transform: translateX(0);
   }
+}
+
+.app-wrapper.show-sub-detail {
+  .home-page {
+    transform: translateX(-100%);
+  }
+  .detail-page {
+    transform: translateX(-100%);
+  }
+  .sub-detail-page {
+    transform: translateX(0);
+  }
+}
+
+.footer-page {
+  height: 100%;
+  overflow-y: auto;
+  padding-bottom: calc(50px + 57px);
+}
+
+/* --- Estilos para la transición de login instantánea --- */
+.app-wrapper.no-transition .home-page,
+.app-wrapper.no-transition .detail-page,
+.app-wrapper.no-transition .sub-detail-page {
+  transition: none;
 }

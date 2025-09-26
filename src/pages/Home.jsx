@@ -1,7 +1,7 @@
 import React from 'react';
 import '../css/Home.scss'
 
-const Home = ({ onNavigate }) => {
+const Home = ({ onNavigate, user }) => {
   return (
     <>
       <header>
@@ -10,7 +10,7 @@ const Home = ({ onNavigate }) => {
         <img id='usuario-verificado' src={require("../img/usuario-verificado.jpeg")} alt="Usuario Verificado" />
       </header>
       <div id="second-header">
-        <p>¡Hola, Isaias!</p>
+        <p>¡Hola, {user.nombre}!</p>
       </div>
       <div id="turnos-programados">
         <img src={require("../img/turnos-programados.jpeg")} alt="" />

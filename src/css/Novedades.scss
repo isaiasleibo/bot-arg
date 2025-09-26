@@ -1,0 +1,47 @@
+.novedades {
+    height: 100%;
+    background-color: white;
+
+    #novedades-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        width: calc(100% - 30px);
+        margin: 0 auto;
+        margin-top: 40px;
+
+        img {
+            height: 85px;
+        }
+
+        p {
+            font-size: 14px;
+            font-weight: 700;
+            color: #333333;
+            max-width: 200px;
+            text-align: center;
+        }
+
+        button {
+            all: unset;
+            width: calc(100% - 30px);
+            margin: 0 auto;
+            margin-top: 5px;
+            background-color: #372fc2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+            border-radius: 50px;
+            cursor: pointer;
+
+            p {
+                color: white;
+                font-size: 18px;
+                font-weight: 700;
+            }
+        }
+    }
+}

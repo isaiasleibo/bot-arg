@@ -1,0 +1,130 @@
+/* Estilos para el componente DNI Digital */
+.dni-digital {
+  .card-perspective {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .dni-content-placeholder {
+    width: calc(100% - 30px);
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+
+    #main-section {
+      padding: 0 15px;
+      padding-top: 20px;
+
+      #dots {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        margin-top: 15px;
+
+        .dot {
+          width: 11px;
+          height: 11px;
+          background-color: #8e8e8e;
+          border-radius: 100px;
+
+          &.active {
+            background-color: #372fc1;
+          }
+        }
+      }
+
+      #nombre-completo {
+        font-weight: 700;
+        color: #333333;
+        font-size: 17px;
+        margin-bottom: 15px;
+      }
+
+      #last-update {
+        font-size: 14px;
+        color: #333333;
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 20px;
+      }
+    }
+
+    #divider-horizontal {
+      background-color: #d1d1d1;
+      width: 100%;
+      height: 1px;
+    }
+
+    #detail-and-deactivate {
+      display: grid;
+      grid-template-columns: 1fr 1px 1fr;
+      width: 80%;
+      margin: 0 auto;
+
+      #divider {
+        width: 1px;
+        height: 50px;
+        background-color: #d1d1d1;
+        margin: 0;
+      }
+
+      .button {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        &:last-child {
+          justify-content: end;
+        }
+
+        img {
+          height: 18px;
+          width: 22px;
+          object-fit: contain;
+        }
+
+        p {
+          font-size: 14px;
+          color: #333333;
+          margin-left: 7px;
+          font-weight: 500;
+        }
+      }
+    }
+
+    #qr-code {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 80%;
+      height: 50px;
+      margin: 0 auto;
+      cursor: pointer;
+      
+      div {
+        display: flex;
+        align-items: center;
+
+        img {
+          height: 20px;
+        }
+
+        p {
+          font-size: 14px;
+          color: #333333;
+          margin-left: 7px;
+          font-weight: 500;
+        }
+      }
+
+      #arrow {
+        width: 15px;
+        object-fit: contain;
+      }
+    }
+  }
+
+}

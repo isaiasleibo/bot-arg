@@ -1,0 +1,188 @@
+$transition-duration: 0.5s;
+
+// Estilos del contenedor de la aplicación (equivalente a bg-gray-100, flex, etc.)
+.app-container {
+  background-color: #f7fafc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+}
+
+// Contenedor que establece la perspectiva 3D para el efecto de volteo.
+.card-perspective {
+  aspect-ratio: 21/13;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+// Elemento interior que realmente gira.
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform $transition-duration ease-in-out;
+  transform-style: preserve-3d;
+
+  // Clase que se añade con JavaScript para girar la tarjeta 180 grados.
+  &.flipped {
+    transform: rotateY(-180deg);
+  }
+}
+
+// Estilos comunes para ambas caras (frontal y trasera) de la tarjeta.
+.card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border-radius: calc(var(--card-size-ref) * 0.1);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  // Propiedad crucial para que la cara de atrás no sea visible cuando no corresponde.
+  -webkit-backface-visibility: hidden; // Para mayor compatibilidad con navegadores
+  backface-visibility: hidden;
+  overflow: hidden;
+
+  img {
+    width: 99%;
+    height: 99%;
+    object-fit: contain;
+  }
+}
+
+// Estilos específicos para la cara frontal.
+.card-front {
+  z-index: 2;
+
+  p {
+    position: absolute;
+    font-size: calc(var(--card-size-ref) * 0.16);
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+  }
+
+  #apellido {
+    top: calc(var(--card-size-ref) * 0.61);
+    left: calc(var(--card-size-ref) * 1.65);
+  }
+
+  #nombre {
+    top: calc(var(--card-size-ref) * 0.93);
+    left: calc(var(--card-size-ref) * 1.65);
+  }
+
+  #sexo {
+    top: calc(var(--card-size-ref) * 1.28);
+    left: calc(var(--card-size-ref) * 1.65);
+  }
+
+  #nacionalidad {
+    top: calc(var(--card-size-ref) * 1.28);
+    left: calc(var(--card-size-ref) * 2.485);
+  }
+
+  #ejemplar {
+    top: calc(var(--card-size-ref) * 1.28);
+    left: calc(var(--card-size-ref) * 4.165);
+  }
+
+  #fecha-de-nacimiento {
+    top: calc(var(--card-size-ref) * 1.64);
+    left: calc(var(--card-size-ref) * 1.65);
+  }
+
+  #fecha-de-emision {
+    top: calc(var(--card-size-ref) * 1.985);
+    left: calc(var(--card-size-ref) * 1.65);
+  }
+
+  #fecha-de-vencimiento {
+    top: calc(var(--card-size-ref) * 2.34);
+    left: calc(var(--card-size-ref) * 1.65);
+  }
+
+  #numero-de-tramite {
+    top: calc(var(--card-size-ref) * 2.68);
+    left: calc(var(--card-size-ref) * 1.65);
+    max-width: calc(var(--card-size-ref) * 0.82);
+    word-wrap: break-word;
+  }
+
+  #documento {
+    font-size: calc(var(--card-size-ref) * 0.25);
+    left: calc(var(--card-size-ref) * 0.12);
+    top: calc(var(--card-size-ref) * 2.68);
+    font-weight: 700;
+  }
+
+  #pdf147 {
+    position: absolute;
+    width: calc(var(--card-size-ref) * 1.87);
+    height: calc(var(--card-size-ref) * 0.47);
+    top: calc(var(--card-size-ref) * 2.54);
+    left: calc(var(--card-size-ref) * 3);
+
+    canvas {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+}
+
+// Estilos específicos para la cara trasera.
+// La rotamos 180 grados desde el inicio para que esté "detrás".
+.card-back {
+  transform: rotateY(-180deg);
+
+  p {
+    position: absolute;
+    font-size: calc(var(--card-size-ref) * 0.16);
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+  }
+
+  #domicilio {
+    top: calc(var(--card-size-ref) * 0.12);
+    left: calc(var(--card-size-ref) * 0.10);
+    max-width: calc(var(--card-size-ref) * 4.78);
+    ;
+  }
+
+  #domicilio::first-letter {
+    margin-left: calc(var(--card-size-ref) * 0.65);
+  }
+
+  #lugar-de-nacimiento {
+    top: calc(var(--card-size-ref) * 0.515);
+    left: calc(var(--card-size-ref) * 1.45);
+  }
+
+  #barcode {
+    position: absolute;
+    top: calc(var(--card-size-ref) * 1.97);
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--card-size-ref) * 0.05);
+
+    p {
+      display: grid;
+      grid-template-columns: repeat(30, 1fr);
+      position: static;
+      white-space: pre;
+      width: calc(var(--card-size-ref) * 4.6);
+      letter-spacing: 0;
+    }
+
+    span {
+      display: block;
+      font-family: "Roboto Mono", monospace;
+      font-size: calc(var(--card-size-ref) * 0.18);
+    }
+  }
+}

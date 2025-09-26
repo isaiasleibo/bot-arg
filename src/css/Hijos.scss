@@ -1,0 +1,44 @@
+.hijos {
+    #hijos-section {
+        background-color: white;
+        width: calc(100% - 30px);
+        margin: 0 auto;
+        margin-top: 20px;
+        padding: 20px 15px;
+        color: #333333;
+        border-radius: 8px;
+        box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+
+        .title {
+            font-weight: 700;
+            margin-bottom: 10px;
+            font-size: 17px;
+        }
+
+        .description {
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        button {
+            all: unset;
+            width: 100%;
+            margin: 0 auto;
+            margin-top: 20px;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 48px;
+            border-radius: 50px;
+            border: 1px solid #372fc2;
+            cursor: pointer;
+
+            p {
+                color: #372fc2;
+                font-size: 18px;
+                font-weight: 700;
+            }
+        }
+    }
+}

@@ -1,0 +1,239 @@
+.salud {
+    .salud-title {
+        margin: 0 15px;
+        margin-top: 20px;
+        font-size: 17px;
+        font-weight: 700;
+        color: #333333;
+    }
+
+    #cobertura-de-salud {
+        background-color: white;
+        width: calc(100% - 30px);
+        margin: 0 auto;
+        margin-top: 20px;
+        border-radius: 8px;
+        box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+        color: #333333;
+
+        #divider-horizontal {
+            background-color: #d1d1d1;
+            width: 100%;
+            height: 1px;
+            margin: 20px 0;
+        }
+
+        #divider-horizontal.end {
+            margin: 0;
+            margin-top: 19px;
+            background-color: #ffffff00;
+        }
+
+        .title {
+            font-weight: 700;
+            margin-bottom: 10px;
+            font-size: 17px;
+            padding: 20px 15px 0 15px;
+        }
+
+        #cobertura {
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+
+            img {
+                height: 35px;
+                padding-right: 15px;
+            }
+
+            p {
+                font-size: 14px;
+                font-weight: 600;
+            }
+        }
+
+        #suministrado-por {
+            font-size: 13px;
+            margin-left: 15px;
+
+            span {
+                color: #72a8db;
+                font-weight: 700;
+            }
+        }
+    }
+
+    #donacion-de-organos {
+        background-color: white;
+        width: calc(100% - 30px);
+        margin: 0 auto;
+        margin-top: 20px;
+        border-radius: 8px;
+        box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+        color: #333333;
+
+        #divider-horizontal {
+            background-color: #d1d1d1;
+            width: 100%;
+            height: 1px;
+            margin: 20px 0;
+        }
+
+        #divider-horizontal.end {
+            margin: 0;
+            margin-top: 19px;
+            background-color: #ffffff00;
+        }
+
+        #divider-horizontal.first {
+            margin-top: 0;
+        }
+
+        .header-section {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            cursor: pointer;
+            user-select: none;
+
+            img {
+                height: 30px;
+            }
+
+            #divider {
+                width: 1px;
+                height: 40px;
+                background-color: #d1d1d1;
+                margin: 0 15px;
+            }
+
+            p {
+                font-size: 17px;
+                font-weight: 700;
+                color: #333333;
+            }
+        }
+
+        #voluntad-de-donar {
+            p {
+                font-size: 14px;
+                margin: 0 15px;
+            }
+
+            button {
+                all: unset;
+                width: calc(100% - 30px);
+                margin: 0 auto;
+                background-color: #372fc2;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 50px;
+                border-radius: 50px;
+                cursor: pointer;
+                margin-top: 15px;
+
+                p {
+                    color: white;
+                    font-size: 18px;
+                    font-weight: 700;
+                }
+            }
+        }
+
+        #suministrado-por {
+            font-size: 13px;
+            margin-left: 15px;
+
+            span {
+                color: #72a8db;
+                font-weight: 700;
+            }
+        }
+    }
+
+    #vacunas-de-calendario {
+        background-color: white;
+        width: calc(100% - 30px);
+        margin: 0 auto;
+        margin-top: 20px;
+        border-radius: 8px;
+        box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+        color: #333333;
+
+        #divider-horizontal {
+            background-color: #d1d1d1;
+            width: 100%;
+            height: 1px;
+            margin: 20px 0;
+        }
+
+        #divider-horizontal.end {
+            margin: 0;
+            margin-top: 19px;
+            background-color: #ffffff00;
+        }
+
+        #divider-horizontal.first {
+            margin-top: 0;
+        }
+
+        .header-section {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            cursor: pointer;
+            user-select: none;
+
+            img {
+                height: 30px;
+            }
+
+            #divider {
+                width: 1px;
+                height: 40px;
+                background-color: #d1d1d1;
+                margin: 0 15px;
+            }
+
+            p {
+                font-size: 17px;
+                font-weight: 700;
+                color: #333333;
+            }
+        }
+
+        #texts {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            .description {
+                font-size: 14px;
+                margin: 0 15px;
+                color: #333333;
+            }
+        }
+
+        button {
+            all: unset;
+            width: calc(100% - 32px);
+            margin: 0 auto;
+            margin-top: 20px;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 48px;
+            border-radius: 50px;
+            border: 1px solid #372fc2;
+            cursor: pointer;
+
+            p {
+                color: #372fc2;
+                font-size: 18px;
+                font-weight: 700;
+            }
+        }
+    }
+}

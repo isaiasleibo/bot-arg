@@ -1,0 +1,46 @@
+.turnos {
+    #turnos-programados {
+        background-color: white;
+        width: calc(100% - 30px);
+        margin: 0 auto;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 25px;
+        border-radius: 8px;
+        box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+
+        img {
+            height: 100px;
+        }
+
+        p {
+            font-size: 18px;
+            font-weight: 700;
+            margin-top: 30px;
+        }
+
+        button {
+            all: unset;
+            width: 100%;
+            margin: 0 auto;
+            background-color: #372fc2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+            border-radius: 50px;
+            cursor: pointer;
+            margin-top: 30px;
+
+            p {
+                all: unset;
+                color: white;
+                font-size: 18px;
+                font-weight: 700;
+            }
+        }
+    }
+}

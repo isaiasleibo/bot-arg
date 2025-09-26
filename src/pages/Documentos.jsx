@@ -2,24 +2,17 @@ import React, { useState } from 'react';
 import Header from '../components/Header';
 import '../css/Documentos.scss'
 
-const Documentos = ({ onBack }) => {
-  // 1. Estado para controlar si la sección está abierta o cerrada
+const Documentos = ({ onBack, onNavigateToDni }) => {
   const [isOpen, setIsOpen] = useState(false);
-  // 2. Nuevo estado para controlar el tiempo de espera (throttle)
   const [isThrottled, setIsThrottled] = useState(false);
 
-  // 3. Modificamos la función para incluir el control de tiempo
   const handleToggle = () => {
-    // Si está en espera, no hacemos nada
     if (isThrottled) {
       return;
     }
-    // Activamos el estado de espera
     setIsThrottled(true);
-    // Cambiamos el estado para abrir/cerrar
     setIsOpen(!isOpen);
 
-    // Después de 300ms, desactivamos el estado de espera
     setTimeout(() => {
       setIsThrottled(false);
     }, 200);
@@ -42,7 +35,7 @@ const Documentos = ({ onBack }) => {
         <div id="hidden-section" className={isOpen ? 'visible' : ''}>
           <div id="divider-horizontal"></div>
 
-          <button id='show-dni'>
+          <button id='show-dni' onClick={() => onNavigateToDni('DniDigital')}>
             <p>Ver DNI digital</p>
           </button>
 

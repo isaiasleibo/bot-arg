@@ -1,0 +1,112 @@
+.login {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+
+    #header-login {
+        height: 55px;
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+
+        #atras {
+            height: 20px;
+        }
+    }
+
+    #logo {
+        width: 80%;
+        margin: 60px auto;
+    }
+
+    #divider-horizontal {
+        background-color: #d1d1d1;
+        width: 100%;
+        height: 1px;
+        margin-top: 20px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        width: calc(100% - 50px);
+        margin: 0 auto;
+
+        input {
+            all: unset;
+            border-bottom: 1.4px solid #6b737e;
+            font-weight: 500;
+            padding-bottom: 5px;
+            margin-bottom: 30px;
+
+            &::placeholder {
+                color: #6b737e;
+            }
+        }
+
+        p {
+            text-align: center;
+            font-size: 14px;
+            margin-top: 15px;
+            color: #333333;
+        }
+
+        .error-message {
+            margin-top: 0;
+            margin-bottom: 15px;
+            color: red;
+        }
+
+        button {
+            all: unset;
+            width: 100%;
+            margin: 0 auto;
+            background-color: #372fc2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 40px;
+            border-radius: 50px;
+            cursor: pointer;
+
+            p {
+                margin-top: 0;
+                color: white;
+                font-size: 14px;
+                font-weight: 700;
+            }
+        }
+    }
+
+    #create-account {
+        padding: 30px 0;
+
+        p {
+            font-weight: 600;
+            text-align: center;
+        }
+
+        button {
+            all: unset;
+            width: calc(100% - 50px);
+            margin: 0 auto;
+            margin-top: 20px;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 38px;
+            border-radius: 50px;
+            border: 1px solid #372fc2;
+            cursor: pointer;
+
+            p {
+                color: #372fc2;
+                font-size: 14px;
+                font-weight: 700;
+            }
+        }
+    }
+}
